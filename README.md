@@ -10,3 +10,4 @@ This is the learning game engine project Nanamichiaki Engine based on TheCherno'
 * 引入了第三方库spdlog作为引擎日志库的依赖  
 * 引擎模块增加了LOG模块，区分引擎内部Core和外部引用应用App作为两份日志的输出  
 * 首先使用NNMCAK::Log::Init() 初始化日志，使用类似NNMCAK_CORE_ERROR作为日志输出。日志等级：trace、info、warn、error、fatal  
+* 引入了构建系统premake5，方便构建整个系统，复制dll文件等操作。只需要运行项目目录下的GenerateProjects.bat即可在windows下完成构建！  
