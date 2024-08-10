@@ -18,6 +18,9 @@
     <ClCompile Include="src\NNMCAK\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="src\NNMCAK\Log.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NNMCAK\Application.h">
@@ -30,6 +33,9 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\NNMCAK\EntryPoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NNMCAK\Log.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

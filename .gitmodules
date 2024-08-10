@@ -1,0 +1,3 @@
+[submodule "Nanamichiaki/vender/spdlog"]
+	path = Nanamichiaki/vender/spdlog
+	url = https://github.com/gabime/spdlog

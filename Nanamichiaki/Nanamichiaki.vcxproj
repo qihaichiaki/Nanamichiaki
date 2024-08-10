@@ -113,6 +113,7 @@
       <PreprocessorDefinitions>NNMCAK_BUILD_DLL;NNMCAK_PLATFORM_WINDOWS;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanamichiaki\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,6 +129,7 @@
       <PreprocessorDefinitions>NNMCAK_BUILD_DLL;NNMCAK_PLATFORM_WINDOWS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Nanamichiaki\vender\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -137,9 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\NNMCAK\Log.cpp" />
     <ClCompile Include="src\NNMCAK\Application.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\NNMCAK\Log.h" />
     <ClInclude Include="src\NNMCAK\Application.h" />
     <ClInclude Include="src\NNMCAK\Core.h" />
     <ClInclude Include="src\Nanamichiaki.h" />
