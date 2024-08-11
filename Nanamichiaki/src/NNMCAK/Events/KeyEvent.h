@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace NNMCAK
 {
 	// 键盘事件基类

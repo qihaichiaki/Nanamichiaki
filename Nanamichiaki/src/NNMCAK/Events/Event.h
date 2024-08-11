@@ -2,8 +2,6 @@
 
 #include "NNMCAK/Core.h"
 
-#include <string>
-#include <functional>
 
 namespace NNMCAK
 {

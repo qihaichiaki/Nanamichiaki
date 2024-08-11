@@ -24,3 +24,4 @@ This is the learning game engine project Nanamichiaki Engine based on TheCherno'
 
 * 事件系统基类为Event、事件系统调度为EventDispatcher进行调度  
 * 事件系统均支持打印，或者日志输出。输出对象为ToString方法  
+* 增加NNMCAKpch.h 预编译头，将标准库的头文件放入，方便后续的快速build。目前只有动态库能够生成  

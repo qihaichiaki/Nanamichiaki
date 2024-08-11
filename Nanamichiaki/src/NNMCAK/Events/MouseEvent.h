@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace NNMCAK
 {
 	class NNMCAK_API MouseMovedEvent : public Event

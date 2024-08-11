@@ -4,6 +4,9 @@
     <Filter Include="NNMCAK">
       <UniqueIdentifier>{FD3B80C3-E9DD-AA99-D298-BEEDBED931EA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="NNMCAK\Events">
+      <UniqueIdentifier>{41E91448-ADA9-907E-76E4-D9FBE263D55A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\NNMCAK\Application.h">
@@ -15,9 +18,22 @@
     <ClInclude Include="src\NNMCAK\EntryPoint.h">
       <Filter>NNMCAK</Filter>
     </ClInclude>
+    <ClInclude Include="src\NNMCAK\Events\ApplicationEvent.h">
+      <Filter>NNMCAK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NNMCAK\Events\Event.h">
+      <Filter>NNMCAK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NNMCAK\Events\KeyEvent.h">
+      <Filter>NNMCAK\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NNMCAK\Events\MouseEvent.h">
+      <Filter>NNMCAK\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\NNMCAK\Log.h">
       <Filter>NNMCAK</Filter>
     </ClInclude>
+    <ClInclude Include="src\NNMCAKpch.h" />
     <ClInclude Include="src\Nanamichiaki.h" />
   </ItemGroup>
   <ItemGroup>
@@ -27,5 +43,6 @@
     <ClCompile Include="src\NNMCAK\Log.cpp">
       <Filter>NNMCAK</Filter>
     </ClCompile>
+    <ClCompile Include="src\NNMCAKpch.cpp" />
   </ItemGroup>
 </Project>

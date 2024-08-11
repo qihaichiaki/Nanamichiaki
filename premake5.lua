@@ -21,6 +21,11 @@ project "Nanamichiaki"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 								-- 设置构建项目时应放置对象和其他中间文件的目录
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	
+								-- 添加预编译头
+	pchheader "NNMCAKpch.h"
+								-- Windows特有
+	pchsource "Nanamichiaki/src/NNMCAKpch.cpp"
 								-- 将文件包括在项目中
 	files
 	{

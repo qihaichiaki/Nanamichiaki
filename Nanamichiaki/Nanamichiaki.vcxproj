@@ -76,7 +76,8 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>NNMCAKpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NNMCAK_PLATFORM_WINDOWS;NNMCAK_BUILD_DLL;NNMCAK_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -98,7 +99,8 @@ copy /B /Y ..\bin\windows_Debug_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\wind
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>NNMCAKpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NNMCAK_PLATFORM_WINDOWS;NNMCAK_BUILD_DLL;NNMCAK_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -124,7 +126,8 @@ copy /B /Y ..\bin\windows_Release_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\wi
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
-      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>NNMCAKpch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>NNMCAK_PLATFORM_WINDOWS;NNMCAK_BUILD_DLL;NNMCAK_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>src;vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -157,11 +160,15 @@ copy /B /Y ..\bin\windows_Dist_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\windo
     <ClInclude Include="src\NNMCAK\Events\KeyEvent.h" />
     <ClInclude Include="src\NNMCAK\Events\MouseEvent.h" />
     <ClInclude Include="src\NNMCAK\Log.h" />
+    <ClInclude Include="src\NNMCAKpch.h" />
     <ClInclude Include="src\Nanamichiaki.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NNMCAK\Application.cpp" />
     <ClCompile Include="src\NNMCAK\Log.cpp" />
+    <ClCompile Include="src\NNMCAKpch.cpp">
+      <PrecompiledHeader>Create</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
