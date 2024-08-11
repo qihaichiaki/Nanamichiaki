@@ -10,3 +10,5 @@
 #else
 	#error Currently NNMCAK Engine does not support other platforms!
 #endif
+
+#define BIT(x) (1 << x)

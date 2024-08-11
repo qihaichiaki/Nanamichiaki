@@ -5,6 +5,7 @@
 #include <memory>
 
 #include "spdlog/spdlog.h"
+#include "spdlog/fmt/ostr.h"
 
 namespace NNMCAK
 {
@@ -21,6 +22,8 @@ namespace NNMCAK
 	};
 }
 
+
+
 // 定义一些日志宏方便使用。注意必须优先调用Init才能使用
 // Core 引擎
 #define NNMCAK_CORE_TRACE(...)	::NNMCAK::Log::GetCoreLogger()->trace(__VA_ARGS__)
@@ -35,4 +38,3 @@ namespace NNMCAK
 #define NNMCAK_APP_WARN(...)	::NNMCAK::Log::GetAppLogger()->warn(__VA_ARGS__)
 #define NNMCAK_APP_ERROR(...)	::NNMCAK::Log::GetAppLogger()->error(__VA_ARGS__)
 #define NNMCAK_APP_FATAL(...)	::NNMCAK::Log::GetAppLogger()->critical(__VA_ARGS__)
-

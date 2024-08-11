@@ -1,4 +1,4 @@
-workspace "Nanamichiaki"				-- 解决方案
+workspace "Nanamichiaki"		-- 解决方案
 	architecture "x64"			-- 架构
 
 	configurations
@@ -30,6 +30,7 @@ project "Nanamichiaki"
 
 	includedirs					-- 指定编译器的包含文件搜索路径
 	{
+		"%{prj.name}/src",
 								-- spdlog 第三方日志库
 		"%{prj.name}/vendor/spdlog/include"
 	}
@@ -38,7 +39,7 @@ project "Nanamichiaki"
 		cppdialect "C++17"
 		staticruntime "On"		-- 静态运行时 将<RuntimeLibrary>设置为“多线程”
 								-- 指定目标操作系统的最小和最大版本 WIN SDK
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 								-- 将预处理器或编译器符号添加到项目中 宏定义
 		defines
@@ -101,7 +102,7 @@ project "Sandbox"
 		cppdialect "C++17"
 		staticruntime "On"		-- 静态运行时 将<RuntimeLibrary>设置为“多线程”
 								-- 指定目标操作系统的最小和最大版本 WIN SDK
-		systemversion "10.0.22621.0"
+		systemversion "latest"
 
 								-- 将预处理器或编译器符号添加到项目中 宏定义
 		defines

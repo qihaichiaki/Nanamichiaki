@@ -11,3 +11,16 @@ This is the learning game engine project Nanamichiaki Engine based on TheCherno'
 * 引擎模块增加了LOG模块，区分引擎内部Core和外部引用应用App作为两份日志的输出  
 * 首先使用NNMCAK::Log::Init() 初始化日志，使用类似NNMCAK_CORE_ERROR作为日志输出。日志等级：trace、info、warn、error、fatal  
 * 引入了构建系统premake5，方便构建整个系统，复制dll文件等操作。只需要运行项目目录下的GenerateProjects.bat即可在windows下完成构建！  
+
+### [24/8/11]  
+* 事件系统设计思路：  
+![](doc/事件系统思路.png)  
+
+* 当前设计事件系统支持如下：  
+	1. 窗口事件：WindowClose、WindowResize  
+	2. 应用系统事件：AppTick、AppUpdate、 AppRender  
+	3. 按键事件：KeyPressed、KeyReleased  
+	4. 鼠标事件：MouseButtonPressed、 MouseButtonReleased、MouseMoved、MouseScrolled  
+
+* 事件系统基类为Event、事件系统调度为EventDispatcher进行调度  
+* 事件系统均支持打印，或者日志输出。输出对象为ToString方法  
