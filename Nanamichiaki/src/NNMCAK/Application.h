@@ -2,8 +2,6 @@
 
 #include "Core.h"
 
-#include "NNMCAK/Events/Event.h"
-
 namespace NNMCAK
 {
 	class NNMCAK_API Application

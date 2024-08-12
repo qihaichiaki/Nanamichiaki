@@ -17,7 +17,6 @@ namespace NNMCAK
 	}
 	void Application::Run()
 	{
-
 		WindowResizeEvent windowResizeEvent(1200, 900);
 		NNMCAK_APP_TRACE(windowResizeEvent);
 		if (!windowResizeEvent.IsInCategory(EventCategoryMouse))
