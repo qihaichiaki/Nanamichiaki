@@ -107,7 +107,9 @@ project "Sandbox"
 	{
 								-- spdlog 第三方日志库
 		"Nanamichiaki/vendor/spdlog/include",
-		"Nanamichiaki/src"
+		"Nanamichiaki/src",
+		"Nanamichiaki/vendor",
+		"%{IncludeDir.GLFW}"
 	}
 								-- 指定要链接的库和项目的列表
 	links

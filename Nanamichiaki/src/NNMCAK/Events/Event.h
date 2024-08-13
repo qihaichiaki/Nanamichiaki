@@ -1,5 +1,6 @@
 #pragma once
 
+#include "NNMCAKpch.h"
 #include "NNMCAK/Core.h"
 
 
@@ -79,7 +80,7 @@ namespace NNMCAK
 		Event& m_Event;
 	};
 
-	std::ostream& operator<<(std::ostream& os, const Event& event)
+	inline std::ostream& operator<<(std::ostream& os, const Event& event)
 	{
 		return os << event.ToString();
 	}

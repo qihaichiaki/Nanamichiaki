@@ -163,8 +163,10 @@ copy /B /Y ..\bin\windows_Dist_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\windo
     <ClInclude Include="src\NNMCAK\Events\KeyEvent.h" />
     <ClInclude Include="src\NNMCAK\Events\MouseEvent.h" />
     <ClInclude Include="src\NNMCAK\Log.h" />
+    <ClInclude Include="src\NNMCAK\Window.h" />
     <ClInclude Include="src\NNMCAKpch.h" />
     <ClInclude Include="src\Nanamichiaki.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NNMCAK\Application.cpp" />
@@ -172,6 +174,7 @@ copy /B /Y ..\bin\windows_Dist_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\windo
     <ClCompile Include="src\NNMCAKpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
