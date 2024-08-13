@@ -11,6 +11,11 @@ workspace "Nanamichiaki"		-- 解决方案
 -- 生成的文件输出目录：系统名_模式名_架构名
 outputdir = "%{cfg.system}_%{cfg.buildcfg}_%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "Nanamichiaki/vendor/GLFW/include"
+
+include "Nanamichiaki/vendor/GLFW"
+
 -- NNMCAK Engine 相关配置
 project "Nanamichiaki"
 	location "Nanamichiaki"		-- 位置，相对于项目根目录
@@ -37,7 +42,14 @@ project "Nanamichiaki"
 	{
 		"%{prj.name}/src",
 								-- spdlog 第三方日志库
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"		-- 过滤器 将后续构建设置限制为特定环境
