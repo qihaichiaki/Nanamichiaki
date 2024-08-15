@@ -70,7 +70,7 @@ namespace NNMCAK
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.m_Handled = func(*(std::reinterpret_cast<T>(&m_Event)));  // 基类类型转换为派生类后调用函数
+				m_Event.m_Handled = func(*((T*)(&m_Event)));  // 基类类型转换为派生类后调用函数
 				return true;
 			}
 

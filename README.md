@@ -25,3 +25,10 @@ This is the learning game engine project Nanamichiaki Engine based on TheCherno'
 * 事件系统基类为Event、事件系统调度为EventDispatcher进行调度  
 * 事件系统均支持打印，或者日志输出。输出对象为ToString方法  
 * 增加NNMCAKpch.h 预编译头，将标准库的头文件放入，方便后续的快速build。~~目前只有动态库能够生成~~  
+
+### [24/8/13]  
+* 添加了GLFW库作为NNMCAK在Windows下对Window的支持，现在能正常初始化和创建窗口，目前还无法检测事件  
+
+### [24/8/15]  
+* 添加了窗口中检测鼠标、窗口、按键的检测事件，事件触发会在Application中得到反馈，但是Application对于Window完全是透明的  
+* 关闭窗口事件完成，触发窗口关闭时结束循环  
