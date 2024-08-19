@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -111,6 +112,7 @@ copy /B /Y ..\bin\windows_Debug_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\wind
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -139,6 +141,7 @@ copy /B /Y ..\bin\windows_Release_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\wi
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -162,6 +165,8 @@ copy /B /Y ..\bin\windows_Dist_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\windo
     <ClInclude Include="src\NNMCAK\Events\Event.h" />
     <ClInclude Include="src\NNMCAK\Events\KeyEvent.h" />
     <ClInclude Include="src\NNMCAK\Events\MouseEvent.h" />
+    <ClInclude Include="src\NNMCAK\Layer.h" />
+    <ClInclude Include="src\NNMCAK\LayerStack.h" />
     <ClInclude Include="src\NNMCAK\Log.h" />
     <ClInclude Include="src\NNMCAK\Window.h" />
     <ClInclude Include="src\NNMCAKpch.h" />
@@ -170,6 +175,8 @@ copy /B /Y ..\bin\windows_Dist_x86_64\Nanamichiaki\Nanamichiaki.dll ..\bin\windo
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NNMCAK\Application.cpp" />
+    <ClCompile Include="src\NNMCAK\Layer.cpp" />
+    <ClCompile Include="src\NNMCAK\LayerStack.cpp" />
     <ClCompile Include="src\NNMCAK\Log.cpp" />
     <ClCompile Include="src\NNMCAKpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

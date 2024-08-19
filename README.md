@@ -32,3 +32,7 @@ This is the learning game engine project Nanamichiaki Engine based on TheCherno'
 ### [24/8/15]  
 * 添加了窗口中检测鼠标、窗口、按键的检测事件，事件触发会在Application中得到反馈，但是Application对于Window完全是透明的  
 * 关闭窗口事件完成，触发窗口关闭时结束循环  
+
+### [24/8/19]  
+* 添加了Layer和控制Layer事件和渲染的LayerStack  
+* 在Application的run中会先对每个Layer进行Update，其次对window进行Update。在事件响应里，对于Layer会从后往前进行响应事件，如果事件被响应执行了则退出循环  

@@ -75,14 +75,17 @@ project "Nanamichiaki"
 	
 	filter "configurations:Debug"
 		defines "NNMCAK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"			-- 调试符号打开
 	
 	filter "configurations:Release"
 		defines "NNMCAK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"			-- 优化符号
 
 	filter "configurations:Dist"
 		defines "NNMCAK_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 
@@ -131,12 +134,15 @@ project "Sandbox"
 	
 	filter "configurations:Debug"
 		defines "NNMCAK_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"			-- 调试符号打开
 	
 	filter "configurations:Release"
 		defines "NNMCAK_RELEASE"
+		buildoptions "/MD"
 		optimize "On"			-- 优化符号
 
 	filter "configurations:Dist"
 		defines "NNMCAK_DIST"
+		buildoptions "/MD"
 		optimize "On"

@@ -49,8 +49,7 @@ namespace NNMCAK
 		{
 			return GetEventCategory() & category;
 		}
-		
-	protected:
+
 		bool m_Handled = false;  // 检查事件是否被处理了
 	};
 

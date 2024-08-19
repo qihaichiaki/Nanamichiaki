@@ -36,6 +36,12 @@
     <ClInclude Include="src\NNMCAK\Events\MouseEvent.h">
       <Filter>NNMCAK\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\NNMCAK\Layer.h">
+      <Filter>NNMCAK</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NNMCAK\LayerStack.h">
+      <Filter>NNMCAK</Filter>
+    </ClInclude>
     <ClInclude Include="src\NNMCAK\Log.h">
       <Filter>NNMCAK</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\NNMCAK\Application.cpp">
+      <Filter>NNMCAK</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NNMCAK\Layer.cpp">
+      <Filter>NNMCAK</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NNMCAK\LayerStack.cpp">
       <Filter>NNMCAK</Filter>
     </ClCompile>
     <ClCompile Include="src\NNMCAK\Log.cpp">
