@@ -5,6 +5,8 @@
 #include "NNMCAK/Events/KeyEvent.h"
 #include "NNMCAK/Events/MouseEvent.h"
 
+#include "glad/glad.h"
+
 namespace NNMCAK
 {
 	static bool s_GLFWInitialized = false;
@@ -57,9 +59,15 @@ namespace NNMCAK
 		m_Window = glfwCreateWindow(static_cast<int>(m_Data.Width), static_cast<int>(m_Data.Height),
 									m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		NNMCAK_CORE_ASSERT(status, "Failed to initialize Glad!");
+
+		// 设置用户数据
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);
 
+		// 窗口变化
 		glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* window, int width, int height) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 			data->Width = static_cast<unsigned int>(width);
@@ -69,6 +77,7 @@ namespace NNMCAK
 			data->EventCallback(event);
 		});
 
+		// 窗口关闭
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 			WindowCloseEvent event;
@@ -76,6 +85,7 @@ namespace NNMCAK
 			data->EventCallback(event);
 		});
 
+		// 键盘按钮
 		glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 
@@ -103,6 +113,7 @@ namespace NNMCAK
 
 		});
 
+		// 鼠标按键  
 		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 
@@ -124,12 +135,14 @@ namespace NNMCAK
 
 		});
 
+		// 鼠标滚动
 		glfwSetScrollCallback(m_Window, [](GLFWwindow* window, double xoffset, double yoffset) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 			MouseScrolledEvent event(static_cast<float>(xoffset), static_cast<float>(yoffset));
 			data->EventCallback(event);
 		});
 
+		// 鼠标移动
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xpos, double ypos) {
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);
 			MouseMovedEvent event(static_cast<float>(xpos), static_cast<float>(ypos));

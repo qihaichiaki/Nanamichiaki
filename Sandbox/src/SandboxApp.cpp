@@ -17,7 +17,7 @@ public:
 
 	void OnEvent(NNMCAK::Event& e) override
 	{
-		NNMCAK_APP_INFO("{0}", e);
+		NNMCAK_APP_TRACE("{0}", e);
 	}
 };
 

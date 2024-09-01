@@ -12,9 +12,13 @@ workspace "Nanamichiaki"		-- 解决方案
 outputdir = "%{cfg.system}_%{cfg.buildcfg}_%{cfg.architecture}"
 
 IncludeDir = {}
+IncludeDir["spdlog"] = "Nanamichiaki/vendor/spdlog/include"
 IncludeDir["GLFW"] = "Nanamichiaki/vendor/GLFW/include"
+IncludeDir["Glad"] = "Nanamichiaki/vendor/Glad/include"
+
 
 include "Nanamichiaki/vendor/GLFW"
+include "Nanamichiaki/vendor/Glad"
 
 -- NNMCAK Engine 相关配置
 project "Nanamichiaki"
@@ -41,14 +45,16 @@ project "Nanamichiaki"
 	includedirs					-- 指定编译器的包含文件搜索路径
 	{
 		"%{prj.name}/src",
-								-- spdlog 第三方日志库
-		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+								-- 第三方库头文件目录
+		"%{IncludeDir.spdlog}",
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -62,7 +68,8 @@ project "Nanamichiaki"
 		defines
 		{
 			"NNMCAK_PLATFORM_WINDOWS",
-			"NNMCAK_BUILD_DLL"
+			"NNMCAK_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 								-- 指定构建完成后要运行的 shell 命令
@@ -108,8 +115,8 @@ project "Sandbox"
 
 	includedirs					-- 指定编译器的包含文件搜索路径
 	{
-								-- spdlog 第三方日志库
-		"Nanamichiaki/vendor/spdlog/include",
+								-- NNMCAK库包含目录
+		"%{IncludeDir.spdlog}",
 		"Nanamichiaki/src",
 		"Nanamichiaki/vendor",
 		"%{IncludeDir.GLFW}"
